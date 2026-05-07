@@ -30,29 +30,33 @@ const Overview = () => {
       title: 'Active Compressors',
       value: '3/5',
       icon: Zap,
-      color: 'text-green-600',
-      bgColor: 'bg-green-100'
+      gradient: 'from-green-400 to-emerald-600',
+      bgGradient: 'from-green-50 to-emerald-50',
+      shadowColor: 'shadow-green-500/25'
     },
     {
       title: 'System Pressure',
       value: '7.2 bar',
       icon: Activity,
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-100'
+      gradient: 'from-blue-400 to-indigo-600',
+      bgGradient: 'from-blue-50 to-indigo-50',
+      shadowColor: 'shadow-blue-500/25'
     },
     {
       title: 'Total Flow Rate',
       value: '450 m³/h',
       icon: Eye,
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-100'
+      gradient: 'from-purple-400 to-pink-600',
+      bgGradient: 'from-purple-50 to-pink-50',
+      shadowColor: 'shadow-purple-500/25'
     },
     {
       title: 'Active Alerts',
       value: '2',
       icon: AlertCircle,
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-100'
+      gradient: 'from-orange-400 to-red-600',
+      bgGradient: 'from-orange-50 to-red-50',
+      shadowColor: 'shadow-orange-500/25'
     }
   ];
 
@@ -65,20 +69,21 @@ const Overview = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {systemStats.map((stat, index) => {
           const Icon = stat.icon;
           return (
-            <div key={index} className="bg-white rounded-lg shadow p-6">
+            <div key={index} className={`bg-gradient-to-br ${stat.bgGradient} rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 p-6 border border-white/50 backdrop-blur-sm`}>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-600">{stat.title}</p>
                   <p className="text-2xl font-bold text-gray-900 mt-1">{stat.value}</p>
                 </div>
-                <div className={`p-3 rounded-full ${stat.bgColor}`}>
-                  <Icon className={`w-6 h-6 ${stat.color}`} />
+                <div className={`p-3 bg-gradient-to-r ${stat.gradient} rounded-xl shadow-lg ${stat.shadowColor} transform hover:scale-110 transition-all duration-300`}>
+                  <Icon className="w-6 h-6 text-white" />
                 </div>
               </div>
+              <div className="mt-4 h-1 bg-gradient-to-r from-transparent via-gray-300 to-transparent rounded-full"></div>
             </div>
           );
         })}
