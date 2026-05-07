@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Welcome from './pages/Welcome';
-import Dashboard from './pages/Dashboard';
+import Layout from './components/Layout';
 import Overview from './pages/Overview';
 import Aircom from './pages/Aircom';
 import SensorSystem from './pages/SensorSystem';
@@ -16,7 +16,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Welcome />} />
-        <Route path="/dashboard" element={<Dashboard />}>
+        <Route path="/dashboard" element={<Layout />}>
           <Route index element={<Overview />} />
           <Route path="overview" element={<Overview />} />
           <Route path="aircom" element={<Aircom />} />

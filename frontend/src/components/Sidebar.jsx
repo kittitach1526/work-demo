@@ -67,7 +67,7 @@ const Sidebar = () => {
   const location = useLocation();
 
   return (
-    <div className="w-64 bg-gray-900 text-white min-h-screen">
+    <div className="w-64 bg-gray-900 text-white min-h-screen flex-shrink-0">
       <div className="p-4">
         <div className="flex items-center space-x-2 mb-8">
           <LayoutDashboard className="w-6 h-6 text-primary-400" />
@@ -107,7 +107,7 @@ const Sidebar = () => {
         </nav>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-800">
+      <div className="absolute bottom-0 left-0 right-0 p-4">
         <div className="text-xs text-gray-400 text-center">
           System Status: Online
         </div>

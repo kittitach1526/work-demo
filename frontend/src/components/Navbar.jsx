@@ -3,7 +3,7 @@ import { Zap, User, LogOut } from 'lucide-react';
 
 const Navbar = ({ userName }) => {
   return (
-    <div className="bg-white shadow-md border-b border-gray-200">
+    <div className="bg-white shadow-md">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
