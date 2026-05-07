@@ -123,7 +123,7 @@ const Sidebar = () => {
         </nav>
       </div>
 
-      <div className="p-4 bg-gradient-to-t from-gray-900/90 to-transparent">
+      {/* <div className="p-4 bg-gradient-to-t from-gray-900/90 to-transparent">
         <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg p-3 backdrop-blur-sm border border-green-500/20">
           <div className="flex items-center justify-center space-x-2 mb-2">
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -133,7 +133,7 @@ const Sidebar = () => {
             Last sync: Just now
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
