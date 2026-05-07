@@ -185,7 +185,7 @@ const AircomTimeline = () => {
                 <div className="w-32 font-medium text-gray-700">Machine</div>
                 <div className="flex-1 flex space-x-1">
                   {hours.map(hour => (
-                    <div key={hour} className="text-xs text-gray-500 text-center" style={{ minWidth: '40px' }}>
+                    <div key={hour} className="text-xs text-gray-500 text-center" style={{ minWidth: '30px' }}>
                       {hour}
                     </div>
                   ))}
@@ -208,7 +208,7 @@ const AircomTimeline = () => {
                             <div
                               key={index}
                               className="h-8 bg-gray-100 rounded"
-                              style={{ minWidth: '40px' }}
+                              style={{ minWidth: '25px' }}
                             />
                           );
                         }
@@ -221,10 +221,10 @@ const AircomTimeline = () => {
                             style={{
                               width: `${width}%`,
                               backgroundColor: machineData.color,
-                              minWidth: width > 0 ? '20px' : '0'
+                              minWidth: width > 0 ? '15px' : '0'
                             }}
                           >
-                            {width > 30 && (
+                            {width > 25 && (
                               <div className="flex items-center space-x-1">
                                 {machineData.status === 'running' ? (
                                   <Play className="w-3 h-3" />
