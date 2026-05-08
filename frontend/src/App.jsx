@@ -10,12 +10,14 @@ import AutoEnergyMode from './pages/AutoEnergyMode';
 import AircomTimeline from './pages/AircomTimeline';
 import Alarm from './pages/Alarm';
 import ExportData from './pages/ExportData';
+import Login from './pages/Login';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Welcome />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Layout />}>
           <Route index element={<Overview />} />
           <Route path="overview" element={<Overview />} />
